@@ -1,12 +1,10 @@
-# Tensorflow-Slightly-Flexible-3D-UNet
-Slightly Flexible 3D UNet Implementation by Tensorflow 2
-# Tensorflow-Slightly-Flexible-UNet (Updated: 2023/05/05)
+# Tensorflow-Slightly-Flexible-3D-UNet (Updated: 2023/05/06)
 
 <h2>
 1 Tensorflow UNet Model
 </h2>
 <p>
-This is a slightly flexible UNet Model Implementation by Tensorflow 2, which is literally cusomizable by a configuration file.
+This is a slightly flexible 3D-UNet Model Implementation by Tensorflow 2, which is literally cusomizable by a configuration file.
 </p>
 In order to write the extensible UNet Model, we have used the Python scripts in the following web sites.
 </p>
@@ -20,7 +18,7 @@ In order to write the extensible UNet Model, we have used the Python scripts in 
 </pre>
 
 <h2>
-2 Create TensorflowUNet Model
+2 Create Tensorflow3DUNet Model
 </h2>
  You can customize your Tensorflow3DUNet model by using a configration file.<br>
 <pre>
@@ -147,7 +145,7 @@ on <b>num_layers</b> defined in <b>model.config</b> file.
 
 You can create TensorflowUNet Model by running the following command.<br>
 <pre>
->python TensorflowUNet.py
+>python Tensorflow3DUNet.py
 </pre>
 You will see the following summary of the model.<br>
 <pre>
