@@ -143,7 +143,7 @@ on <b>num_layers</b> defined in <b>model.config</b> file.
     return model
 </pre>
 
-You can create TensorflowUNet Model by running the following command.<br>
+You can create Tensorflow3DUNet Model by running the following command.<br>
 <pre>
 >python Tensorflow3DUNet.py
 </pre>
