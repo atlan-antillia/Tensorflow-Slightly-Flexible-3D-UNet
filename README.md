@@ -57,7 +57,7 @@ Model.
 
 <tr>
 <td>base_filters</td>
-<td>The number of initial filters for Conv2D layer.</td>
+<td>The number of initial filters for Conv3D layer.</td>
 </tr>
 <tr>
 <td>num_layers</td>
