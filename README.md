@@ -13,8 +13,14 @@ In order to write the extensible UNet Model, we have used the Python scripts in 
  https://github.com/mrkolarik/3D-brain-segmentation/blob/master/3D-unet.py</pre>
 </pre>
 <pre>
-2.Optimized High Resolution 3D Dense-U-Net Network for Brain and Spine Segmentation 
+2. Optimized High Resolution 3D Dense-U-Net Network for Brain and Spine Segmentation 
  https://www.mdpi.com/2076-3417/9/3/404
+</pre>
+
+Please see also:<br>
+<pre>
+3. Tensorflow-Slightly-Flexible-UNet 
+https://github.com/atlan-antillia/Tensorflow-Slightly-Flexible-UNet
 </pre>
 
 <h2>
