@@ -74,6 +74,15 @@ TRAIN  = "train"
 BEST_MODEL_FILE = "best_model.h5"
 
 """
+https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPool3D
+tf.keras.layers.MaxPool3D(
+    pool_size=(2, 2, 2),
+    strides=None,
+    padding='valid',
+    data_format=None,
+    **kwargs
+)
+
 https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv3DTranspose
 tf.keras.layers.Conv3DTranspose(
     filters,
@@ -137,14 +146,16 @@ class Tensorflow3DUNet:
     enc         = []
     kernel_size = (3, 3, 3)
     pool_size   = (2, 2, 2)
-
+  
     for i in range(num_layers):
       filters = base_filters * (2**i)
       c = Conv3D(filters, kernel_size, activation=relu, kernel_initializer='he_normal', padding='same')(s)
       c = Dropout(dropout_rate * i)(c)
-      c = Conv3D(filters, kernel_size, activation=relu, kernel_initializer='he_normal',padding='same')(c)
+      c = Conv3D(filters, kernel_size, activation=relu, kernel_initializer='he_normal', padding='same')(c)
+      print("--- enc shape {}".format(c.shape))
       if i < (num_layers-1):
         p = MaxPool3D(pool_size=pool_size)(c)
+
         s = p
       enc.append(c)
     
@@ -159,6 +170,9 @@ class Tensorflow3DUNet:
       filters = base_filters* (2**f)
       u = Conv3DTranspose(filters, (2, 2, 2), strides=(2, 2, 2), padding='same')(c)
       n += 1
+      print("shape u {}".format(u.shape))
+      print("shape enc[n] {}".format(enc[n].shape))
+
       u = concatenate([u, enc[n]], axis=4)
       u = Conv3D(filters, kernel_size, activation=relu, kernel_initializer='he_normal', padding='same')(u)
       u = Dropout(dropout_rate * f)(u)
