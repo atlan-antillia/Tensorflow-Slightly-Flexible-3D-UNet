@@ -1,7 +1,7 @@
 # Tensorflow-Slightly-Flexible-3D-UNet (Updated: 2023/05/06)
 
 <h2>
-1 Tensorflow UNet Model
+1 Tensorflow 3D-UNet Model
 </h2>
 <p>
 This is a slightly flexible 3D-UNet Model Implementation by Tensorflow 2, which is literally cusomizable by a configuration file.
